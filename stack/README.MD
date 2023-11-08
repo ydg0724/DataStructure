@@ -30,8 +30,10 @@
 
 #Stack 구현
 
-    -[Stack.c](stack.c)
+    - [Stack.c](stack.c)
 
 #Stack 활용
 
-    -[괄호 검사](check_parenthesis.c)
+    - [괄호 검사](check_parenthesis.c)
+    - [후위 표기법 계산](postfix.c)
+    - [미로 찾기](maze.c)
