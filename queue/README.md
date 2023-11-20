@@ -1,4 +1,4 @@
-#Queue
+# Queue
 
     큐는 먼저 들어온 데이터가 먼저 나가는 구조인 추상 자료형이다.
 
@@ -7,7 +7,7 @@
     - 삭제가 일어나는 곳을 전단(front)라고 한다.
     - 이러한 입출력 형태를 선입선출(FIFO : First-In First-Out)라고 한다.
 
-##Queue의 추상 자료형
+## Queue의 추상 자료형
 
     - 객체 : 0개 이상의 요소들로 구성된 선형 리스트
     - 함수
@@ -29,10 +29,11 @@
             if ( is_empty(q) ) ::= ERROR_QUEUEEMPTY;
             else q의 맨 앞에 있는 e를 읽어서 반환한다.
 
-##Queue 구현
-[선형큐](LinearQueue.c)
+## Queue 구현
 
-#원형큐(CircleQueue)
+[LinearQueue.c](LinearQueue.c)
+
+# 원형큐(CircleQueue)
 
     선형큐는 front와 rear의 값이 계속 증가만 한다. 따라서 언제가는 배열의 끝에 도달하게 되고 배열의 앞부분이 비어 있더라도 사용하지 못한다는 단점이 있다.
 
@@ -45,17 +46,18 @@
     - 'rear <- (rear+1) % n'
     - 'front <- (front+1) % n'
 
-##원형큐 구현
-[원형큐](CircleQueue.c)
+## 원형큐 구현
 
-#덱(deque)
+[CircleQueue.c](CircleQueue.c)
+
+# 덱(deque)
 
     덱(deque)은 double-ended queue의 줄임말로서 큐의 전단(front)와 후단(rear)에ㅓ 모두 삽입과 삭제가 가능한 큐를 의미한다.
     하지만 중간에 삽입하거나 삭제하는 것은 허용하지 않는다.
 
     덱은 스택과 큐의 연산들을 모두 가지고 있다.
 
-##덱의 추상자료형
+## 덱의 추상자료형
 
     - 객체 : n개의 element형의 요소들의 순서 있는 모임
     - 함수
@@ -68,7 +70,8 @@
         - delete_front(dq) ::= 덱의 앞에 요소를 반환한 다음 삭제한다.
         - delete_rear(dq) ::= 덱의 뒤에 요소를 반환한 다음 삭제한다.
         - get_front(dq) ::= 덱의 앞에서 삭제하지 않고 앞에 있는 요소를 반환한다.
-        - get_rear(dq) ::= 덱의 뒤에서 삭제하지 않고 뒤에 있는 요소를 반환한다.
+        - get_rear(dq) ::= 덱의 뒤에서 삭제하지 않고 뒤에 있는 요소를 반환한다.'
 
-##덱 구현
-[덱](deque.c)
+## 덱 구현
+
+[Deque.c](deque.c)
