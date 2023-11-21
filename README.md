@@ -10,6 +10,8 @@
 
 - [큐](queue/)
 
+- [리스트](list/)
+
 ## Data Structure Visualizations
 
 <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html>
