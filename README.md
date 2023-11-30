@@ -12,6 +12,8 @@
 
 - [리스트](list/)
 
+- [트리](tree/)
+
 ## Data Structure Visualizations
 
 <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html>
