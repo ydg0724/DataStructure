@@ -22,6 +22,7 @@
 ## 이진 트리 종류
 
 - [스레드 이진 트리](./Thread%20binary%20tree/)
+- [이진 탐색 트리](./Binary%20search%20tree/)
 
 ## 이진 트리 구현
 
@@ -80,4 +81,4 @@ void postorder(node* node){
         printf("[%d] ", node->data);
     }
 }
-```
+
