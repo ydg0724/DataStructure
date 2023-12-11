@@ -23,6 +23,7 @@
 
 - [스레드 이진 트리](./Thread%20binary%20tree/)
 - [이진 탐색 트리](./Binary%20search%20tree/)
+- [히프](./Heap/)
 
 ## 이진 트리 구현
 
