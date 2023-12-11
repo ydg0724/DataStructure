@@ -36,7 +36,73 @@
 
 히프는 완전이진트리 기반의 자료 구조를 의미한다. 히프는 여러 개의 값들 중에서 가장 큰 값이나 가장 작은 값을 빠르게 찾아내도록 만들어진 자료 구조이다.
 
-히프는 다음과 같은 조건이 항상 성립하는 트리이다.
+히프는 중복된 값을 허용하며 다음과 같은 조건이 항상 성립하는 트리이다.
 ```
+최대 히프
 key(부모노드) >= key(자식노드)
+최소 히프
+key(부모노드) <= 
 ```
+
+## 히프의 구현
+![Heap](Heap.png)
+- 히프는 배열을 이용하여 구현을 하며 배열의 첫 번째 인덱스 0은 사용하지 않는다.
+    - 왼쪽 자식의 인덱스 = (부모의 인덱스) * 2
+    - 오른쪽 자식의 인덱스 = (부모의 인덱스) * 2 + 1
+    - 부모의 인덱스 = (자식의 인덱스) / 2
+
+- 삽입 연산
+    - 히프에 새로운 요소가 들어오면, 일단 새로운 노드를 일단 히프의 마지막 노드로 삽입한다. 그 후에 새로운 노드를 부모 노드들과 교환해서 히프의 성질을 만족할 때 까지 반복한다.
+
+```c
+//삽입 함수
+void insert_max_head(HeapType* h, element item) {
+    int i;
+    i = ++(h->heap_size);
+
+    //부모노드와의 비교 후 스왑
+    while ((i != 1) && (item.key > h->heap[i / 2].key)) {
+        h->heap[i] = h->heap[i / 2];
+        i = i / 2;
+    }
+    h->heap[i] = item; //모든 연산이 끝난 후 item 삽입
+}
+```
+
+- 삭제연산
+    - 최대 히프에서 삭제 연산은 최대값을 가진 요소를 삭제하는 것이다. 그 말은 루드 노드가 삭제되는 것이다. 그 후 빈 루트 노드 자리에는 마지막 노드를 가져와서 히프를 재구성한다.
+
+```c
+//삭제 함수
+element delete_max_heap(HeapType* h){
+    int parent, child;
+    element item, temp;
+
+    item = h->heap[1];
+    temp = h->heap[(h->heap_size)--]; //마지막 배열에 있는 값
+    parent = 1;
+    child = 2;
+    while(child <= heap_size){ 
+        //더 큰 자식의 노드를 찾는다.
+        if((child < h->heap_size)&&(h->heap[child].key < h->heap(child+1).key))
+        child++;
+        if(temp.key>=h->heap[child].key) break; //부모가 더 크다면 스탑
+        //자식이 더 크다면 스왑
+        else if(h->heap[child].key > h->heap[parent].key){  
+            h->heap[parent].key = h->heap[child].key;
+            parent = child;
+            child = child*2;
+        }
+    }
+    h->heap[parent] = temp; //맨처음 복사했던 마지막 노드 삽입
+    return item;
+}
+```
+
+## 히프 코드 구현
+[Heap.c](Heap.c)
+
+## 히프 정렬
+- 최대 히프를 이용하면 정렬을 할 수 있는데 한 번에 하나씩 요소를 히프에서 꺼내서 배열의 뒤쪽부터 저장하면 된다.
+- n개의 요소는 O(nlog_2 n) 시간 안에 정렬된다.
+- 간단한 정렬알고리즘이 O(n^2) 걸리는 것에 비해면 매우 좋은편이다.
