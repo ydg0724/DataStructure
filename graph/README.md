@@ -29,7 +29,7 @@ V(G)는 그래프 G의 정점들의 집합을, E(G)는 그래프 G의 간선들�
 연산 : 
     create_graph() ::= 그래프를 생성한다.
     init(g) ::= 그래프 g를 초기화한다.
-    insert_vertex(g,v) ::= 그래프 g에 정점 v를 삽입한다.
+    insert_vertex(g,v) ::= 그래프 g에 정점 v를 삽입한다.2
     insert_edge(g,u,v) ::= 그래프 g에 간선 (u,v)를 삽입한다.
     delete_vertex(g,v) ::= 그래프 g에 정점 v를 삭제한다.
     delete_edge(g,u,v) ::= 그래프 g에 간선 (u,v)를 삭제한다.
@@ -37,3 +37,26 @@ V(G)는 그래프 G의 정점들의 집합을, E(G)는 그래프 G의 간선들�
     adjacent(v) ::= 정점 v에 인접한 정점들의 리스트를 반환한다.
     destroy_graph(g) ::= 그래프 g를 제거한다.
 ```
+
+그래프의 표현 방법에는 2가지가 있다.
+- 인접 행렬(adjacentcy matrix) : 2차원 배열을 사용한 그래프
+- 인접 리스트(adjacency list) : 연결 리스트를 사용한 그래프
+## 인접 행렬
+adj[i][j] : 노드 i에서 j로 가는 간선이 있으면 1, 없으면 0. cf) 가중치가 있는 그래프라면 1대신 가중치 값을 넣어준다.
+
+- 무방향 그래프
+    - 대각 성분을 기준으로 대칭인 성질을 갖게된다.
+ ![undirected graph](./img/undirected%20graph.png)
+
+ - 방향 그래프
+ ![directed graph](./img/directed%20graph.png)
+
+ 장점 : 구현이 쉬우며, 노드 i와 j가 연결되어있는지 확인할 때 adj[i][j]가 0인지 1인지만 확인하면 되므로 시간복잡도가 O(1)이 된다.
+
+ 단점 : 노드 i의 차수를 알기 위해서는 adj[i][1]부터 adj[i][n]까지 방문해야하므로 시간복잡도가 O(n)이 되고 모든 간선의 수를 알기 위해서는 행렬 전체를 조사해야하므로 O(n^2)의 시간복잡도가 필요하다
+
+ ## 인접 리스트
+
+![adjacency list](./img/adjacency%20list.png)
+
+
