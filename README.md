@@ -14,6 +14,12 @@
 
 - [트리](tree/)
 
+- [이진 트리](binary-tree/)
+
+- [그래프](graph/)
+
+- [그래프 탐색](graph-search/)
+
 ## Data Structure Visualizations
 
 <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html>
