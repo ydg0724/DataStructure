@@ -170,6 +170,11 @@ void union(int x,int y){
 }
 ```
 
+## kruskal 구현
+[kruskal](./kruskal.c)
+
+- kruskal의 시간복잡도는 간선들을 정렬하는 시간에 의해 좌우된다. 효율적인 정렬 알고리즘을 사용한다면 시간복잡도는 (elog_2 e)이 된다.
+## 2. 
 
 
 
