@@ -111,7 +111,7 @@ void BFS(GraphType* g, int v){
 ```
 
 - DFS와 마찬가지로 BFS의 시간복잡도가 인접행렬일 경우에는 O(N^2)이고 인접 리스트일 경우에는 O(N+E)이다.
-
+<br/><br/>
 # 최소 신장 트리(MST : minimun spanning tree)
 
 ![spanning tree](./img/spanning%20tree.png)
@@ -129,7 +129,7 @@ void BFS(GraphType* g, int v){
 
 최소 비용 신장 트리를 구하는 몇 가지 방법은 다음과 같다. 
 
-## 1. Kruskal 알고리즘
+# 1. Kruskal 알고리즘
 - Kruskal 알고리즘은 MST가 *1)최소 비용의 간선으로 구성됨* *2)사이클을 포함하지 않음*의 조건에 근거하여 각 단계에서 사이클을 이루지 않는 최소 비용 간선을 선택한다. 이러한 방법을 반복함으로써 모든 정점을 최소 비용으로 연결하는 최적 해답을 구하는 것이다.
 
 - Kruskal 알고리즘 동작
@@ -174,7 +174,11 @@ void union(int x,int y){
 [kruskal](./kruskal.c)
 
 - kruskal의 시간복잡도는 간선들을 정렬하는 시간에 의해 좌우된다. 효율적인 정렬 알고리즘을 사용한다면 시간복잡도는 (elog_2 e)이 된다.
-## 2. 
+<br/><br/>
+# 2. Prim 알고리즘
 
+Prim의 알고리즘은 시작 정점에서부터 출발하여 신장 트리 집합을 단계적으로 확장해나가는 방법이다.
 
+## prim 구현
+[prim](./prim.c)
 
