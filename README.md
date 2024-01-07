@@ -20,6 +20,8 @@
 
 - [그래프 탐색](graph-search/)
 
+## 시간복잡도
+    O(1) > O(logN) > O(N) > O(NlogN) > O(N^2) > O(2^N) > O(N!) 
 ## Data Structure Visualizations
 
 <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html>

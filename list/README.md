@@ -14,7 +14,7 @@
         - delete(list, pos) ::= pos 위치의 요소를 제거한다.
         - clear(list) ::= 리스트의 모든 요소를 제거한다.
         - get_entry(list, pos) ::= pos 위치의 요소를 반환한다.
-        - get_length(;ost) ::= 리스트의 길이를 구한다.
+        - get_length(list) ::= 리스트의 길이를 구한다.
         - is_empty(list) ::= 리스트가 비어있는지를 검사한다.
         - is_full(list) ::= 리스트가 꽉 찼는지를 검사한다.
         - print_list(list) ::= 리스트의 모든 요소를 출력한다.
