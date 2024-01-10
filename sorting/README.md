@@ -17,6 +17,8 @@
 | 삽입 정렬 | O(N^2) | O(N^2) | O(N)
 | 버블 정렬 | O(N^2) | O(N^2) | O(N^2)
 | 합병 정렬 | O(NlogN) | O(NlogN) | O(NlogN)
+| 퀵 정렬 | O(NlogN) | O(N^2) | O(NlogN)
+| 히프 정렬 | O(NlogN) | O(NlogN) | O(NlogN)
 
 단순하지만 비 효율적인 정렬 : [선택](#선택-정렬selection-sort), [삽입](#삽입-정렬insertion-sort), [버블정렬](#버블-정렬bubble-sort) 등
 
